@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import AddIcon from "./AddIcon";
 
 function TodoCreate({ onCreate }) {
   const [text, setText] = useState("");
@@ -56,7 +57,9 @@ function TodoCreate({ onCreate }) {
         <form onSubmit={handleSubmit}>
           <label>Add todo</label>
           <input value={text} onChange={handleChange} />
-          <button className="add">+</button>
+          <button className="add">
+            <AddIcon />
+          </button>
         </form>
       )}
     </>

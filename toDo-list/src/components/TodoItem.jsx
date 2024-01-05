@@ -1,4 +1,5 @@
 import { useState } from "react";
+import EditIcon from "./EditIcon";
 
 function TodoItem({ todo, onEdit, onDelete }) {
   const [input, setInput] = useState(todo.text);
@@ -13,7 +14,7 @@ function TodoItem({ todo, onEdit, onDelete }) {
       {!showTodo ? (
         <div>
           <button className="edit" onClick={() => setShowTodo(!showTodo)}>
-            Edit
+            <EditIcon/>
           </button>
           <button className="delete" onClick={() => onDelete(todo.id)}>
             Delete
