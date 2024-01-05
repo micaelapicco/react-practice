@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function TodoCreate({ onCreate }) {
   const [text, setText] = useState("");
 
@@ -20,7 +21,7 @@ function TodoCreate({ onCreate }) {
       <form onSubmit={handleSubmit}>
         <label>Description</label>
         <input value={text} onChange={handleChange} placeholder="todo..." />
-        <button>Add!</button>
+        <button>+</button>
       </form>
     </div>
   );
