@@ -1,4 +1,7 @@
+import "./App.css";
+
 import { useState } from "react";
+
 import TodoList from "./components/TodoList";
 import TodoCreate from "./components/TodoCreate";
 
@@ -56,18 +59,19 @@ function App() {
     window.localStorage.removeItem("todos");
   };
   return (
-    <>
-      <div>
-        <TodoCreate onCreate={handleCreate}></TodoCreate>
-        <button onClick={handleDeleteAll}>Delete all</button>
-        <TodoList
-          todos={todos}
-          onCreate={handleCreate}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-        />
-      </div>
-    </>
+    <main className="app">
+      <h1>Todo List</h1>
+      <TodoCreate onCreate={handleCreate}></TodoCreate>
+      <button className="delete-all" onClick={handleDeleteAll}>
+        Delete all
+      </button>
+      <TodoList
+        todos={todos}
+        onCreate={handleCreate}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
+    </main>
   );
 }
 
