@@ -1,0 +1,9 @@
+.todo-item {
+    display: flex;
+    flex-direction: row;
+}
+.buttons {
+    flex: auto;
+    display: flex;
+    background-color: aqua;
+}

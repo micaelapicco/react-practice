@@ -1,9 +1,10 @@
-import "./App.css";
+import "./main.css";
 
 import { useState } from "react";
 
 import TodoList from "./components/TodoList";
 import TodoCreate from "./components/TodoCreate";
+import { DeleteAll } from "./components/Icons";
 
 function App() {
   const [todos, setTodos] = useState(() => {
@@ -61,10 +62,10 @@ function App() {
   return (
     <main className="app">
       <h1>Todo List</h1>
-      <TodoCreate onCreate={handleCreate}></TodoCreate>
       <button className="delete-all" onClick={handleDeleteAll}>
-        Delete all
+        <DeleteAll/>
       </button>
+      <TodoCreate onCreate={handleCreate}></TodoCreate>
       <TodoList
         todos={todos}
         onCreate={handleCreate}

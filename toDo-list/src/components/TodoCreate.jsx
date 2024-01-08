@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import AddIcon from "./AddIcon";
-
+import './styles/TodoCreate.css'
+import { AddIcon } from "./Icons";
 function TodoCreate({ onCreate }) {
   const [text, setText] = useState("");
   const [isModalMode, setModalMode] = useState(false);
@@ -30,7 +30,7 @@ function TodoCreate({ onCreate }) {
 
   return (
     <>
-      <button
+      <button className="modal-mode"
         onClick={() =>
           setModalMode((prevState) => {
             if (prevState === false && showModal === true) {
@@ -56,11 +56,15 @@ function TodoCreate({ onCreate }) {
       ) : (
         <form onSubmit={handleSubmit}>
           <label>Add todo</label>
+          <div className="input-add">
           <input value={text} onChange={handleChange} />
           <button className="add">
             <AddIcon />
           </button>
+          </div>
         </form>
+
+
       )}
     </>
   );
