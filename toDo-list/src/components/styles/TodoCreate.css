@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #D29596;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 20px;
     height: 2rem;
@@ -34,16 +34,17 @@ form {
 
 label {
     color: var(--accent-color);
+    font-size: xx-large;
 }
 
 input {
     border: none;
-    background-color: #d2959668;
+    background-color: var(--secondary-color);
     width: 70%;
     border-radius: 30px;
     text-align: left;
     padding: 0.5rem 0.5rem;
-    color: var(--accent-color);
+    color: var(--background-color);
     font-weight: 600;
 }
 

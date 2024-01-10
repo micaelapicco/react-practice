@@ -1,9 +1,21 @@
 .todo-item {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 2px solid var(--primary-color);
+  border-radius: 3rem;
+  margin: 0.75rem;
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-all;
 }
-.buttons {
-    flex: auto;
-    display: flex;
-    background-color: aqua;
+
+.todo-item p {
+  padding: 0.5rem 1rem;
+}
+
+.todo-item input {
+  background-color: var(--background-color);
+  color: var(--primary-color);
 }

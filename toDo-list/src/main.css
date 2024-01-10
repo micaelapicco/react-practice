@@ -1,39 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 :root {
-    --text-font: "Poppins", sans-serif;
-    --text-color: #0C0710;
-    --background-color: #FAF8FC;
-    --primary-color: #945DBA;
-    --secondary-color: #D29596;
-    --accent-color: #D56066;
+  --text-header: "Yellowtail", cursive;
+  --text-font: "Open Sans", sans-serif;
+  --text-color: #0c0710;
+  --background-color: #f4faf9;
+  --primary-color: #945dba;
+  --secondary-color: #9d99cf;
+  --accent-color: #58af9e;
 }
 
 .app {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .delete-all {
-    align-items: flex-end;
-    flex-direction: column;
+  align-items: flex-end;
+  flex-direction: column;
 }
+
 body {
-    background-color: var(--background-color);
-    font-family: var(--text-font);
+  background-color: var(--background-color);
+  font-family: var(--text-font);
 }
 
-
-h1 {
-    color: var(--primary-color);
-    font-weight: 800;
+header {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: 800;
+  font-family: var(--text-header);
+  font-size: xx-large;
 }
 
 button {
-    background-color: var(--background-color);
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.list {
+  max-width: 60vw;
 }

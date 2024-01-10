@@ -7,7 +7,7 @@ function TodoList({ todos, onEdit, onDelete }) {
     );
   });
 
-  return <div>{todosToRender}</div>;
+  return <>{todosToRender}</>;
 }
 
 export default TodoList;

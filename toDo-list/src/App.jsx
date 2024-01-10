@@ -60,19 +60,31 @@ function App() {
     window.localStorage.removeItem("todos");
   };
   return (
-    <main className="app">
-      <h1>Todo List</h1>
-      <button className="delete-all" onClick={handleDeleteAll}>
-        <DeleteAll/>
-      </button>
-      <TodoCreate onCreate={handleCreate}></TodoCreate>
-      <TodoList
-        todos={todos}
-        onCreate={handleCreate}
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-    </main>
+    <>
+      <header>
+        <h1>Todo List</h1>
+      </header>
+
+      <main className="app">
+        <aside>
+          <button className="delete-all" onClick={handleDeleteAll}>
+            <DeleteAll />
+          </button>
+        </aside>
+        <section>
+          <TodoCreate onCreate={handleCreate}></TodoCreate>
+        </section>
+
+        <section className="list">
+          <TodoList
+            todos={todos}
+            onCreate={handleCreate}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+        </section>
+      </main>
+    </>
   );
 }
 

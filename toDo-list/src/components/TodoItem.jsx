@@ -1,4 +1,4 @@
-import './styles/TodoItem.css'
+import "./styles/TodoItem.css";
 import { useState } from "react";
 import { DeleteTodoIcon, EditIcon } from "./Icons";
 
@@ -11,23 +11,25 @@ function TodoItem({ todo, onEdit, onDelete }) {
     setShowTodo(false);
   };
   return (
-    <div className='todo-item'>
+    <article className="todo-item">
       {!showTodo ? (
-        <div className='buttons'>
-          <button className="edit" onClick={() => setShowTodo(!showTodo)}>
-            <EditIcon/>
-          </button>
-          <button className="delete" onClick={() => onDelete(todo.id)}>
-            <DeleteTodoIcon />
-          </button>
-          <h4>{todo.text}</h4>
-        </div>
+        <>
+          <p>{todo.text}</p>
+          <div className="buttons">
+            <button className="edit" onClick={() => setShowTodo(!showTodo)}>
+              <EditIcon />
+            </button>
+            <button className="delete" onClick={() => onDelete(todo.id)}>
+              <DeleteTodoIcon />
+            </button>
+          </div>
+        </>
       ) : (
         <form onSubmit={handleSubmit}>
           <input value={input} onChange={(e) => setInput(e.target.value)} />
         </form>
       )}
-    </div>
+    </article>
   );
 }
 
